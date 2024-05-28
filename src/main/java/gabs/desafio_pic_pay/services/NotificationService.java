@@ -7,13 +7,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
-public class NotificationServicec {
+public class NotificationService {
 
     private final NotificationClient notificationClient;
 
     private static final Logger logger = LoggerFactory.getLogger(NotificationClient.class);
 
-    public NotificationServicec(NotificationClient notificationClient) {
+    public NotificationService(NotificationClient notificationClient) {
         this.notificationClient = notificationClient;
     }
 

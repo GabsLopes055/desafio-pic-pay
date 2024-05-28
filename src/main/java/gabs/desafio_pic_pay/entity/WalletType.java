@@ -2,6 +2,7 @@ package gabs.desafio_pic_pay.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Objects;
 import java.util.UUID;
 
 @Entity
@@ -57,4 +58,16 @@ public class WalletType {
 
     }
 
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        WalletType that = (WalletType) object;
+        return Objects.equals(idWalletType, that.idWalletType) && Objects.equals(description, that.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idWalletType, description);
+    }
 }

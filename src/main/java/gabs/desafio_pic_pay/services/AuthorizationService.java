@@ -22,7 +22,7 @@ public class AuthorizationService {
             throw new PicPayException();
         }
 
-        return response.getBody().authorization();
+        return response.getBody().authorized();
 
     }
 
